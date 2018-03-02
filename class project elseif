@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+const int A_SCORE = 90,
+		B_SCORE = 80,
+		C_SCORE = 70,
+		D_SCORE = 60;
+int test_score;
+
+cout << "Enter your test score" << endl;
+cin >> test_score;
+
+if(test_score >= A_SCORE)
+	cout << "Your grade is an A" << endl;
+else if(test_score >= B_SCORE)
+	cout << "Your grade is a B" << endl;
+else if(test_score >= C_SCORE)
+	cout << "Your grade is a C" << endl;
+else if(test_score >= D_SCORE)
+	cout << "Your grade is a D" << endl;
+else
+	cout << "Your grade is a F" << endl;
+return 0;
+}
