@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cmath>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    string name;
+    double principal, interestRate, interest, totalAmountinSavings;
+    int timesCompounded;
+    
+    cout << "What is your full name? " << endl;
+    getline (cin,name);
+    cout << "What is the principal amount in the savings account? " << endl;
+    cin >> principal;
+    cout << "What is the interest rate? " << endl;
+    cin >> interestRate; interestRate /= 100;
+    cout << "How many times is the interest compounded in a year? " << endl;
+    cin >> timesCompounded;
+    
+    double baseAmount = 1 + (interestRate / timesCompounded);
+    totalAmountinSavings = principal * pow(baseAmount, timesCompounded);
+    interest = totalAmountinSavings - principal;
+    
+    cout << "Here is your account report: " << endl;
+    cout << setprecision (2) << fixed << showpoint;
+    cout << "Interest Rate:          " << setw(8) << interestRate * 100 << "%" << endl;
+    cout << "Times Compounded:       " << setw(8) << timesCompounded << endl;
+    cout << "Principal:            $ " << setw(8) << principal << endl;
+    cout << "Interest:             $ " << setw(8) << interest << endl;
+    cout << "Amount In Savings:    $ " << setw(8) << totalAmountinSavings << endl;
+    cout << name << " has a total amount of $" << totalAmountinSavings << " in the savings account." << endl;
+
+    return 0;
+}
+
