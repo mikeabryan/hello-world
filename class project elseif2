@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main()
+
+{
+char employed, recentgrad;
+cout << "are you employed?" << endl;
+cin >> employed;
+cout << "are you a recent grad?" << endl;
+cin >> recentgrad;
+
+if(employed == 'y')
+{
+	if(recentgrad == 'y')
+	{
+		cout<< "you qualify"<<endl;
+	}
+	else
+	{
+		cout<<"You must be a recent grad"<<endl;
+	}
+}
+else
+{
+	cout<<"You must employed"<<endl;
+
+}
+return 0;
+}
